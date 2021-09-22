@@ -35,8 +35,6 @@
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/card_class_1" />
 
-
-
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
