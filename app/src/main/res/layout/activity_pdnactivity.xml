@@ -14,16 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/apple_temp" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="255dp"
-        android:layout_height="401dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/a_temp" />
+
 
 
 
@@ -37,6 +28,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/leftprev" />
 
         <ImageView
             android:id="@+id/imageView12"
@@ -59,6 +58,34 @@
             android:layout_weight="1"
             android:rotation="180"
             app:srcCompat="@drawable/leftprev" />
+
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="296dp"
+            android:layout_height="427dp"
+            android:layout_marginBottom="44dp"
+            android:layout_weight="2"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/a_temp" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
