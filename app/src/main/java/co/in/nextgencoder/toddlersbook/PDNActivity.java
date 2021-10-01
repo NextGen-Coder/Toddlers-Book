@@ -7,16 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import java.util.List;
-
 import co.in.nextgencoder.toddlersbook.model.Course;
-import co.in.nextgencoder.toddlersbook.model.Topic;
 import co.in.nextgencoder.toddlersbook.service.TopicService;
 import co.in.nextgencoder.toddlersbook.serviceimpl.TopicServiceImpl;
 
 public class PDNActivity extends AppCompatActivity {
 
-    private static boolean isRunning = false;
+    private ImageView primaryIV, secondaryIV;
+
+    private boolean isRunning = false;
     private static int index = 0;
     private Course course;
 
@@ -27,11 +26,21 @@ public class PDNActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdnactivity);
 
+        primaryIV = findViewById( R.id.primaryImage);
+        secondaryIV = findViewById( R.id.secondaryImage);
+
         course = topicService.getClass1ABC( this, getPackageName());
+        setImages();
+    }
+
+    private void setImages() {
+        primaryIV.setImageResource( course.getTopics().get( index).getPrimaryImageResId());
+
+        secondaryIV.setImageResource( course.getTopics().get( index).getSecondaryImageResId());
     }
 
     public void playSound(View view) {
-        MediaPlayer mediaPlayer = MediaPlayer.create( this, course.getTopics().get(index).getPrimarySoundResId());
+        MediaPlayer mediaPlayer = MediaPlayer.create( this, course.getTopics().get( index).getPrimarySoundResId());
 
         if(!isRunning) {
             mediaPlayer.start();
@@ -51,11 +60,13 @@ public class PDNActivity extends AppCompatActivity {
         if( index > 0) {
             index--;
         }
+        setImages();
     }
 
     public void nextImage(View view) {
         if( index < course.getTopics().size()) {
             index++;
         }
+        setImages();
     }
 }

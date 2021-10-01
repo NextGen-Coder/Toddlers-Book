@@ -20,9 +20,14 @@ public class TopicServiceImpl implements TopicService {
         Course course = new Course( className, subjectName);
 
         for (int i = 0; i < 26; i++) {
-            int primaryImgResId = pdnActivity.getResources().getIdentifier( className+"_"+subjectName+"_letter_"+i, "drawable", packageName);
-            int secondaryImgResId = pdnActivity.getResources().getIdentifier( className+"_"+subjectName+"_example_"+i, "drawable", packageName);
-            int primarySoundResId = pdnActivity.getResources().getIdentifier( className+"_"+subjectName+"_"+i, "raw", packageName);
+            int primaryImgResId = pdnActivity.getResources().getIdentifier( "class1_alpha_letters_"+i, "drawable", packageName);
+            int secondaryImgResId = pdnActivity.getResources().getIdentifier( "class1_alpha_example_"+i, "drawable", packageName);
+            int primarySoundResId = pdnActivity.getResources().getIdentifier( "class1_alpha_"+i, "raw", packageName);
+
+            System.out.println( primaryImgResId);
+            System.out.println( secondaryImgResId);
+            System.out.println( primarySoundResId);
+
             Topic topic = new Topic( primaryImgResId, secondaryImgResId, primarySoundResId);
             course.getTopics().add( topic);
         }

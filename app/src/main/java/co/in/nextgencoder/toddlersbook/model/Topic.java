@@ -53,4 +53,14 @@ public class Topic {
     public void setSecondarySoundResId(int secondarySoundResId) {
         this.secondarySoundResId = secondarySoundResId;
     }
+
+    @Override
+    public String toString() {
+        return "Topic{" +
+                "primaryImageResId=" + primaryImageResId +
+                ", secondaryImageResId=" + secondaryImageResId +
+                ", primarySoundResId=" + primarySoundResId +
+                ", secondarySoundResId=" + secondarySoundResId +
+                '}';
+    }
 }

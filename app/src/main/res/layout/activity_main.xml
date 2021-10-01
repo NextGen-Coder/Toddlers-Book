@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
     tools:context=".MainActivity"
-    android:background="@drawable/bg_main">
+    android:padding="20dp">
 
     <LinearLayout
         android:id="@+id/classOneLayout"
@@ -34,7 +35,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card_class_1" />
+                app:srcCompat="@drawable/card_main_topic1" />
 
         </androidx.cardview.widget.CardView>
 
@@ -68,7 +69,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:layout_weight="1"
-            app:srcCompat="@drawable/card_class_2" />
+            app:srcCompat="@drawable/card_main_topic1" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -102,9 +103,9 @@
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
                 android:layout_weight="1"
-                android:src="@drawable/classthree" />
+                android:scaleType="fitXY"
+                android:src="@drawable/card_main_topic1" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -129,16 +130,16 @@
             android:layout_weight="1"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp"
+            android:backgroundTint="#b5dc58"
             app:cardUseCompatPadding="false">
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:src="@drawable/sketch_book" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/card_main_sketchbook" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -147,6 +148,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#b5dc58"
             app:cardCornerRadius="30dp"
             app:cardElevation="10dp"
             app:cardUseCompatPadding="false">
@@ -156,8 +158,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                android:scaleType="centerCrop"
-                android:src="@drawable/story_time" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/card_main_storytime" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>

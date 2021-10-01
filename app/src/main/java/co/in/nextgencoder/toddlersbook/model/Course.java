@@ -46,4 +46,13 @@ public class Course {
     public void setTopics(List<Topic> topics) {
         this.topics = topics;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "className='" + className + '\'' +
+                ", subjectName='" + subjectName + '\'' +
+                ", topics=" + topics +
+                '}';
+    }
 }
