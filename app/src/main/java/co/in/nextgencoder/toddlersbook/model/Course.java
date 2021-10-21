@@ -8,19 +8,22 @@ public class Course {
     private String className;
     private String subjectName;
     private List<Topic> topics;
+    private int size;
 
     public Course() { }
 
-    public Course(String className, String subjectName) {
+    public Course(String className, String subjectName, int size) {
         this.className = className;
         this.subjectName = subjectName;
         topics = new ArrayList<>();
+        this.size = size;
     }
 
-    public Course(String className, String subjectName, List<Topic> topics) {
+    public Course(String className, String subjectName, List<Topic> topics, int size) {
         this.className = className;
         this.subjectName = subjectName;
         this.topics = topics;
+        this.size = size;
     }
 
     public String getClassName() {
@@ -45,6 +48,14 @@ public class Course {
 
     public void setTopics(List<Topic> topics) {
         this.topics = topics;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 
     @Override
