@@ -5,12 +5,13 @@
       <map>
         <entry key="..\:/Toddlers-Book/app/src/main/res/layout/activity_canvas.xml" value="0.1796875" />
         <entry key="..\:/Toddlers-Book/app/src/main/res/layout/activity_class_one.xml" value="0.1796875" />
+        <entry key="..\:/Toddlers-Book/app/src/main/res/layout/activity_expected_canvas.xml" value="0.12395833333333334" />
         <entry key="..\:/Toddlers-Book/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26180092603990446" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
