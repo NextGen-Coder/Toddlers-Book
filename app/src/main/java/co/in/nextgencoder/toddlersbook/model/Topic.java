@@ -15,6 +15,12 @@ public class Topic {
         this.primarySoundResId = primarySoundResId;
     }
 
+    public Topic(int primaryImageResId, int primarySoundResId) {
+        this.primaryImageResId = primaryImageResId;
+        this.secondaryImageResId = secondaryImageResId;
+        this.primarySoundResId = primarySoundResId;
+    }
+
     public Topic(int primaryImageResId, int secondaryImageResId, int primarySoundResId, int secondarySoundResId) {
         this.primaryImageResId = primaryImageResId;
         this.secondaryImageResId = secondaryImageResId;

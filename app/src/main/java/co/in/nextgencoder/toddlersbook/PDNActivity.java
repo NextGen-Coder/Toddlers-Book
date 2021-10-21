@@ -16,7 +16,7 @@ public class PDNActivity extends AppCompatActivity {
     private ImageView primaryIV, secondaryIV;
 
     private boolean isRunning = false;
-    private static int index = 0;
+    private int index = 0;
     private Course course;
 
     TopicService topicService = new TopicServiceImpl();
@@ -29,7 +29,14 @@ public class PDNActivity extends AppCompatActivity {
         primaryIV = findViewById( R.id.primaryImage);
         secondaryIV = findViewById( R.id.secondaryImage);
 
-        course = topicService.getClass1ABC( this, getPackageName());
+        String topicName = getIntent().getStringExtra( "topicName");
+
+        if( topicName.equals( "ABC"))
+            course = topicService.getClass1ABC( this, getPackageName());
+
+        if( topicName.equals( "abc"))
+            course = topicService.getClass1abc( this, getPackageName());
+
         setImages();
     }
 
@@ -57,16 +64,20 @@ public class PDNActivity extends AppCompatActivity {
     }
 
     public void prevImage(View view) {
-        if( index > 0) {
-            index--;
+        --index;
+        if( index >= 0) {
+            setImages();
+        } else {
+            index = 0;
         }
-        setImages();
     }
 
     public void nextImage(View view) {
-        if( index < course.getTopics().size()) {
-            index++;
+        ++index;
+        if( index < course.getSize()) {
+            setImages();
+        } else {
+            index = course.getSize()-1;
         }
-        setImages();
     }
 }

@@ -12,12 +12,11 @@
         android:id="@+id/classOneLayout"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:layout_marginTop="24dp"
-        android:onClick="goToClassOneActivity"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:paddingHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstLayout"
+        app:layout_constraintTop_toBottomOf="@id/firstLayout"
         app:layout_constraintStart_toStartOf="parent"
         >
 
@@ -25,12 +24,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="30dp"
-            app:cardElevation="10dp"
             app:cardUseCompatPadding="false"
             >
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/viewCapitalLetters"
+                android:onClick="goToClassOneActivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -69,7 +68,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:layout_weight="1"
-            app:srcCompat="@drawable/card_main_topic1" />
+            app:srcCompat="@drawable/card_main_topic2" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
