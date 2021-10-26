@@ -48,7 +48,7 @@
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
                         android:onClick="goToArialAnimal"
-                        app:srcCompat="@drawable/card_main_topic1" />
+                        app:srcCompat="@drawable/card3_birds" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -78,7 +78,7 @@
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
                         android:onClick="goToDomesticAnimal"
-                        app:srcCompat="@drawable/card_main_topic1" />
+                        app:srcCompat="@drawable/card2_domestic" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -107,7 +107,7 @@
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
                         android:onClick="goToAquaticAnimal"
-                        app:srcCompat="@drawable/card_main_topic1" />
+                        app:srcCompat="@drawable/card4_aquatic" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -137,7 +137,7 @@
                         android:layout_weight="1"
                         android:onClick="goToWildAnimals"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/card_main_topic1" />
+                        app:srcCompat="@drawable/card1_wild" />
 
                 </androidx.cardview.widget.CardView>
 
