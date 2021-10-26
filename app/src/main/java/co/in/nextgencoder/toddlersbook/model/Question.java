@@ -7,7 +7,7 @@ import co.in.nextgencoder.toddlersbook.model.Option;
 public class Question {
 
     private int imageId;
-    private List<Option>options;
+    private List<Option> options;
     private int answer;
 
     public Question() { }

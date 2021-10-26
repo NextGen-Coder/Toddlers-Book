@@ -6,18 +6,11 @@ import java.util.List;
 public class QuestionSet {
     
     private List<Question> questions;
-    private int size;
 
     public QuestionSet() { }
 
-    public QuestionSet( int size) {
-        questions = new ArrayList<>();
-        this.size = size;
-    }
-
-    public QuestionSet( List<Question> questions, int size) {
+    public QuestionSet( List<Question> questions) {
         this.questions = questions;
-        this.size = size;
     }
 
     public List<Question> getQuestions() {
@@ -29,11 +22,7 @@ public class QuestionSet {
     }
 
     public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
+        return questions.size();
     }
 
     @Override

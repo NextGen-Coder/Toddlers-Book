@@ -15,14 +15,18 @@ public class GameQuizActivity extends AppCompatActivity {
 
 
     public void option0Clicked(View view) {
+
     }
 
     public void option1Clicked(View view) {
+
     }
 
     public void option2Clicked(View view) {
+
     }
 
     public void option3Clicked(View view) {
+
     }
 }
