@@ -24,12 +24,12 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/primaryImage"
+                android:id="@+id/questionImage"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/class1_alpha_letters_0"
+                android:src="@drawable/class1_alpha_example_0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,11 +52,11 @@
             android:id="@+id/option0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:scaleType="fitStart"
             android:layout_marginTop="4dp"
+            android:layout_weight="1"
             android:onClick="option0Clicked"
-            app:srcCompat="@drawable/back" />
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/class1_alpha_letters_0" />
 
         <ImageView
             android:id="@+id/option1"
@@ -65,7 +65,7 @@
             android:onClick="option1Clicked"
             android:layout_marginStart="12dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/voice" />
+            app:srcCompat="@drawable/class1_alpha_letters_5" />
 
         <ImageView
             android:id="@+id/option2"
@@ -74,7 +74,7 @@
             android:layout_weight="1"
             android:onClick="option2Clicked"
             android:layout_marginStart="12dp"
-            app:srcCompat="@drawable/draw" />
+            app:srcCompat="@drawable/class1_alpha_letters_14" />
 
         <ImageView
             android:id="@+id/option3"
@@ -83,7 +83,7 @@
             android:layout_marginStart="12dp"
             android:layout_weight="1"
             android:onClick="option3Clicked"
-            app:srcCompat="@drawable/next" />
+            app:srcCompat="@drawable/class1_alpha_letters_1" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

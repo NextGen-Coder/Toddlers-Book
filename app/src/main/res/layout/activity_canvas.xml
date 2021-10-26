@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="clickOnEraser"
-            android:src="@drawable/eraser_tool" />
+            android:src="@drawable/icon_eraser" />
     </LinearLayout>
 
     <LinearLayout
