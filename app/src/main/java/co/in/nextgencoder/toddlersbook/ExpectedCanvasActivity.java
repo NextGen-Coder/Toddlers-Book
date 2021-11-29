@@ -22,8 +22,9 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 public class ExpectedCanvasActivity extends AppCompatActivity {
+
     private PaintView paintView;
-    private ImageView eraser, brush, backBtn, imageView;
+    private ImageView eraser, brush, backBtn, expectedIV;
     private SeekBar seekBar;
     private Canvas canvas;
 
@@ -46,7 +47,10 @@ public class ExpectedCanvasActivity extends AppCompatActivity {
         paintView.setCurrentColor( Color.BLACK);
 
         eraser = findViewById(R.id.eraser_tool);
-        imageView = findViewById(R.id.expectedImage);
+        expectedIV = findViewById(R.id.expectedImage);
+
+        int resId = getIntent().getIntExtra( "resId", 0);
+        expectedIV.setImageResource( resId);
 
 //        expectedIV = (ImageView) findViewById(R.drawable.class1_alpha_letters_0);
 //        expectedIV = (ImageView) findViewById(R.drawable.class1_alpha_letters_1);

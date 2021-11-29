@@ -34,7 +34,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card_main_topic1" />
+                app:srcCompat="@drawable/card1_capital" />
 
         </androidx.cardview.widget.CardView>
 
@@ -66,7 +66,7 @@
                 android:layout_weight="1"
                 android:onClick="goToLowerAlphaActivity"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card_main_topic1" />
+                app:srcCompat="@drawable/card2_abc" />
 
         </androidx.cardview.widget.CardView>
 
@@ -96,7 +96,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card_main_topic1"
+                app:srcCompat="@drawable/card3_123"
                 android:onClick="goToNumActivity"/>
 
         </androidx.cardview.widget.CardView>

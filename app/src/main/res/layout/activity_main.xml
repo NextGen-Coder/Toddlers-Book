@@ -137,6 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
+                android:onClick="goToCanvas"
                 android:scaleType="fitCenter"
                 android:src="@drawable/card_main_sketchbook" />
         </androidx.cardview.widget.CardView>

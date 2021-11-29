@@ -39,6 +39,7 @@
 
                 android:layout_height="206dp"
                 android:src="@drawable/try_icon"
+                android:onClick="firstStory"
                 android:layout_gravity="center"/>
 
             <ImageView
@@ -46,6 +47,7 @@
                 android:layout_width="227dp"
                 android:layout_height="255dp"
                 android:layout_gravity="center"
+                android:onClick="secondStory"
                 android:src="@drawable/try_icon" />
 
             <ImageView
