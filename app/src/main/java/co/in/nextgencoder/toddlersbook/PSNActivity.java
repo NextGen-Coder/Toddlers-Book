@@ -2,6 +2,7 @@ package co.in.nextgencoder.toddlersbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -97,5 +98,14 @@ public class PSNActivity extends AppCompatActivity {
         } else {
             index = course.getSize()-1;
         }
+    }
+
+    public void goToSketchbook(View view) {
+        int id = course.getTopics().get( index).getPrimaryImageResId();
+
+        Intent intent = new Intent( this, ExpectedCanvasActivity.class);
+        intent.putExtra( "resId", id);
+        startActivity( intent);
+
     }
 }

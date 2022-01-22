@@ -79,7 +79,15 @@
             app:srcCompat="@drawable/voice" />
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/sketchBook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goToSketchbook"
+            app:srcCompat="@drawable/draw" />
+
+        <ImageView
+            android:id="@+id/nextContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"

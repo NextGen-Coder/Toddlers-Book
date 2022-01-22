@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ExpectedCanvasActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -59,15 +60,15 @@
             android:onClick="clickOnEraser"
             android:src="@drawable/icon_eraser" />
     </LinearLayout>
+
     <ImageView
         android:id="@+id/expectedImage"
+        android:layout_marginTop="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
         android:src="@drawable/class1_alpha_letters_0"
-        app:layout_constraintTop_toBottomOf="@id/verticalLayout_one"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
     <LinearLayout
         android:id="@+id/horizontal_layout"
         android:layout_width="wrap_content"

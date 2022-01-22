@@ -31,8 +31,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToCanvas(View view) {
-        Intent intent = new Intent(getApplicationContext(), CanvasActivity.class);
+    public void goToCanvas(View view){
+        Intent intent = new Intent(getApplicationContext(),CanvasActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToStory(View view) {
+        Intent intent = new Intent(getApplicationContext(),AllStoriesActivity.class);
         startActivity(intent);
     }
 }
