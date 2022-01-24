@@ -19,4 +19,9 @@ public class ClassThreeActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),GameQuizActivity.class);
         startActivity(intent);
     }
+
+    public void goToFlipCardActivity(View view) {
+        Intent intent = new Intent(getApplicationContext(),FlipCardGame.class);
+        startActivity(intent);
+    }
 }

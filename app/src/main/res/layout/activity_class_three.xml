@@ -38,4 +38,37 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flipCard"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/capitalLetters"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="30dp"
+            app:cardUseCompatPadding="false"
+            >
+
+            <ImageView
+                android:id="@+id/flipCardView"
+                android:onClick="goToFlipCardActivity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/card1_capital" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

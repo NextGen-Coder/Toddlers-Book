@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 public class GameQuizActivity extends AppCompatActivity {
 
     Dialog myDialog;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +19,15 @@ public class GameQuizActivity extends AppCompatActivity {
         myDialog = new Dialog(this);
     }
 
-
+//    public void correctOption(View view){
+//        if()
+//    }
     public void option0Clicked(View view) {
 
         myDialog.setContentView(R.layout.correct);
         myDialog.show();
+
+
 
     }
 
