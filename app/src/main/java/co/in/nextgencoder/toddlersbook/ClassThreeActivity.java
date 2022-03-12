@@ -24,4 +24,10 @@ public class ClassThreeActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),FlipCardGame.class);
         startActivity(intent);
     }
+
+    public void goToOrderdActivity(View view) {
+
+        Intent intent = new Intent(getApplicationContext(),OrderedNumbers.class);
+        startActivity(intent);
+    }
 }

@@ -10,23 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToddlersBook">
         <activity
+            android:name=".OrderedNumbers"
+            android:exported="false" />
+        <activity
             android:name=".FlipCardGame"
             android:exported="false" />
         <activity
             android:name=".GameQuizActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".AllStoriesActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".StoryTimeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CanvasActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ExpectedCanvasActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".BodyPartsActivity"
             android:exported="false" />
@@ -44,10 +47,10 @@
             android:exported="true" />
         <activity
             android:name=".ClassTwoActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ClassOneActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

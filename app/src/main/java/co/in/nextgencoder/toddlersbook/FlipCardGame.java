@@ -43,7 +43,7 @@ public class FlipCardGame extends AppCompatActivity {
                        ((ImageView)view).setImageResource(R.drawable.question_mark);
                    }
                    else if(pos[currentPos] != pos[position]){
-                       curView.setImageResource(R.drawable.question_mark);
+                       curView.setImageResource(R.drawable.question_mark1);
                    }
                    else {
                        ( (ImageView)view).setImageResource(drawable[pos[position]]);

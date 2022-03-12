@@ -7,52 +7,75 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.List;
+
+import co.in.nextgencoder.toddlersbook.model.Option;
+import co.in.nextgencoder.toddlersbook.model.QuestionSet;
+import co.in.nextgencoder.toddlersbook.service.QuestionService;
+import co.in.nextgencoder.toddlersbook.serviceimpl.QuestionServiceImpl;
+
 public class GameQuizActivity extends AppCompatActivity {
 
     Dialog myDialog;
-    ImageView imageViewZero;
-    ImageView imageViewOne;
-    ImageView imageViewTwo;
-    ImageView imageViewThree;
 
+    ImageView questionImageView;
+    ImageView option0ImageView, option1ImageView, option2ImageView, option3ImageView;
+
+    private int index = 0;
+    QuestionSet questionSet = new QuestionSet();
+
+    private QuestionService questionService = new QuestionServiceImpl();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_quiz);
+
         myDialog = new Dialog(this);
-        imageViewZero = findViewById(R.id.option0);
-        imageViewOne = findViewById(R.id.option1);
-        imageViewTwo = findViewById(R.id.option2);
-        imageViewThree = findViewById(R.id.option3);
+
+        questionImageView = findViewById(R.id.questionImage);
+        option0ImageView = findViewById(R.id.option0);
+        option1ImageView = findViewById(R.id.option1);
+        option2ImageView = findViewById(R.id.option2);
+        option3ImageView = findViewById(R.id.option3);
+
+        questionSet = questionService.getQuestions(this, getPackageName());
+        setImages();
     }
 
-//    public void correctOption(View view){
-//        if(imageViewZero.equals())
-//    }
-    public void option0Clicked(View view) {
+    private void setImages() {
+        questionImageView.setImageResource( questionSet.getQuestions().get( index).getImageId());
 
-        myDialog.setContentView(R.layout.correct);
+        option0ImageView.setImageResource( questionSet.getQuestions().get(index).getOptions().get(0).getImageId());
+        option1ImageView.setImageResource( questionSet.getQuestions().get(index).getOptions().get(1).getImageId());
+        option2ImageView.setImageResource( questionSet.getQuestions().get(index).getOptions().get(2).getImageId());
+        option3ImageView.setImageResource( questionSet.getQuestions().get(index).getOptions().get(3).getImageId());
+    }
+
+    private void optionSelected( int selectedIndex) {
+        if(questionSet.getQuestions().get(index).getAnswer() == selectedIndex) {
+            myDialog.setContentView( R.layout.correct);
+            index++;
+            setImages();
+        } else {
+            myDialog.setContentView( R.layout.wrong);
+        }
         myDialog.show();
+    }
 
+    public void option0Clicked(View view) {
+        optionSelected(0);
     }
 
     public void option1Clicked(View view) {
-
-        myDialog.setContentView(R.layout.wrong);
-        myDialog.show();
-
+        optionSelected(1);
     }
 
     public void option2Clicked(View view) {
-
-        myDialog.setContentView(R.layout.wrong);
-        myDialog.show();
-
+        optionSelected(2);
     }
 
     public void option3Clicked(View view) {
-        myDialog.setContentView(R.layout.wrong);
-        myDialog.show();
+        optionSelected(3);
     }
 }

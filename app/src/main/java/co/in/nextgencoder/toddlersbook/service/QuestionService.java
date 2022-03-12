@@ -5,5 +5,5 @@ import co.in.nextgencoder.toddlersbook.model.QuestionSet;
 
 public interface QuestionService {
 
-        public QuestionSet getQuestions(GameQuizActivity gameQuizActivity);
+        public QuestionSet getQuestions(GameQuizActivity gameQuizActivity, String packageName);
 }
