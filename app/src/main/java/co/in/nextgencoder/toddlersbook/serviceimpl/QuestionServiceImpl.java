@@ -13,7 +13,7 @@ import co.in.nextgencoder.toddlersbook.service.QuestionService;
 
 public class QuestionServiceImpl implements QuestionService {
 
-    public QuestionSet getQuestions(GameQuizActivity gameQuizActivity, String packageNamjue) {
+    public QuestionSet getQuestions(GameQuizActivity gameQuizActivity, String packageName) {
         QuestionSet questionSet = new QuestionSet();
 
         List<Question> questionList = new ArrayList<>();
@@ -29,21 +29,27 @@ public class QuestionServiceImpl implements QuestionService {
             options.add(new Option(0, null));
             options.add(new Option(0, null));
 
-            for( int j=0; j<3; j++) {
-                int index = (int) (Math.random()*4);
-                while( options.get(index).getCorrect()==null) {
-                    index = (int) (Math.random()*4);
-                    int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_"+j, "drawable", packageName);
-                    options.set(index, new Option(optionImgResId, false));
+            while( true) {
+                int index = (int) (Math.random() * 4);
+                if( options.get(index).getImageId()==0) {
+                    int optionImgResId = gameQuizActivity.getResources().getIdentifier("question_" + i + "_option_c", "drawable", packageName);
+                    options.set(index, new Option(optionImgResId, true));
+                    question.setAnswer(index);
+                    break;
                 }
             }
 
-            int index = (int) (Math.random()*4);
-            while( options.get(index).getCorrect()==null) {
-                index = (int) (Math.random() * 4);
-                int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_c", "drawable", packageName);
-                options.add(index, new Option(optionImgResId, true));
-                question.setAnswer(index);
+            for( int j=0; j<3; j++) {
+                while( true) {
+                    int index = (int) (Math.random()*4);
+                    if( options.get(index).getImageId()==0) {
+                        System.out.println("J =====> "+j + " index =======> "+index);
+                        int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_"+j, "drawable", packageName);
+                        options.set(index, new Option(optionImgResId, false));
+                        System.out.println("options =======> "+options);
+                        break;
+                    }
+                }
             }
 
             question.setOptions(options);
