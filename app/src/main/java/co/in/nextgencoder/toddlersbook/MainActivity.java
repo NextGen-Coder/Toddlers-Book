@@ -40,4 +40,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),AllStoriesActivity.class);
         startActivity(intent);
     }
+
+    public void goToStory(View view) {
+        Intent intent = new Intent(getApplicationContext(), AllStoriesActivity.class);
+        startActivity(intent);
+    }
 }
