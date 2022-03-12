@@ -20,7 +20,7 @@ public class QuestionServiceImpl implements QuestionService {
         for( int i=0; i<5; i++) {
             Question question = new Question();
 
-            int questionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i, "drawable", packageName);
+            int questionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i, "drawable", packageNamjue);
             question.setImageId( questionImgResId);
 
             List<Option> options = new ArrayList<>();
@@ -33,7 +33,7 @@ public class QuestionServiceImpl implements QuestionService {
                 int index = (int) (Math.random()*4);
                 while( options.get(index).getCorrect()==null) {
                     index = (int) (Math.random()*4);
-                    int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_"+j, "drawable", packageName);
+                    int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_"+j, "drawable", packageNamjue);
                     options.set(index, new Option(optionImgResId, false));
                 }
             }
@@ -41,7 +41,7 @@ public class QuestionServiceImpl implements QuestionService {
             int index = (int) (Math.random()*4);
             while( options.get(index).getCorrect()==null) {
                 index = (int) (Math.random() * 4);
-                int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_c", "drawable", packageName);
+                int optionImgResId = gameQuizActivity.getResources().getIdentifier( "question_"+i+"_option_c", "drawable", packageNamjue);
                 options.add(index, new Option(optionImgResId, true));
                 question.setAnswer(index);
             }

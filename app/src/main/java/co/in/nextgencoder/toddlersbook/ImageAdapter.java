@@ -34,13 +34,13 @@ public class ImageAdapter extends BaseAdapter {
         ImageView imageView;
         if(convertView == null){
             imageView = new ImageView(this.context);
-            imageView.setLayoutParams(new GridView.LayoutParams(180,248) );
+            imageView.setLayoutParams(new GridView.LayoutParams(246,336) );
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         }
         else imageView = (ImageView) convertView;
 
 
-        imageView.setImageResource(R.drawable.question_mark);
+        imageView.setImageResource(R.drawable.question_mark1);
 
         return imageView;
     }
