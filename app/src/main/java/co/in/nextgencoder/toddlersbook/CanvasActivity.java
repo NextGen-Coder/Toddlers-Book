@@ -138,7 +138,7 @@ public class CanvasActivity extends AppCompatActivity {
     }
 
     public void setColorGreen(View view) {
-        paintView.setCurrentColor( Color.rgb( 0, 255, 0));
+        paintView.setCurrentColor( Color.rgb( 50, 205, 50));
     }
 
     public void setColorOrange(View view) {

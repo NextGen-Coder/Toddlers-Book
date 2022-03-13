@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CanvasActivity"
-    android:background="@color/white">
+    tools:context=".CanvasActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/horizontalLayout"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <co.in.nextgencoder.toddlersbook.PaintView
@@ -23,33 +22,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-    <LinearLayout
-        android:id="@+id/horizontalLayout"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:onClick="clickOnBackButton"
-            android:src="@drawable/back_button"
-            tools:layout_editor_absoluteY="87dp" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/verticalLayout_one"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="5dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/seekbar"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalLayout_one"
+        app:layout_constraintEnd_toStartOf="@+id/horizontal_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalLayout_one">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/eraser_tool"
@@ -103,7 +86,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="#32CD32"
             android:onClick="setColorGreen" />
 
         <Button
@@ -174,15 +157,13 @@
 
     <SeekBar
         android:id="@+id/seekbar"
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
         android:max="550"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/horizontalLayout_one"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/horizontalLayout"
+        app:layout_constraintStart_toStartOf="@+id/horizontalLayout_one"
         app:layout_constraintTop_toBottomOf="@id/horizontalLayout_one" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

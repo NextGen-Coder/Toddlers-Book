@@ -10,8 +10,8 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalLayout">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <co.in.nextgencoder.toddlersbook.PaintView
             android:id="@+id/paintView"
@@ -24,34 +24,16 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <LinearLayout
-        android:id="@+id/horizontalLayout"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:onClick="clickOnBackButton"
-            android:src="@drawable/back_button"
-            tools:layout_editor_absoluteY="87dp" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/verticalLayout_one"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="10dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/seekbar"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalLayout_one"
+        app:layout_constraintEnd_toStartOf="@+id/horizontal_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalLayout_one">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/eraser_tool"
@@ -61,15 +43,9 @@
             android:src="@drawable/icon_eraser" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/expectedImage"
-        android:layout_marginTop="10dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/class1_alpha_letters_0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
-    <LinearLayout
+
+
+        <LinearLayout
         android:id="@+id/horizontal_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -184,14 +160,24 @@
 
     <SeekBar
         android:id="@+id/seekbar"
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
         android:max="550"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/horizontalLayout"
+        app:layout_constraintEnd_toEndOf="@+id/horizontalLayout_one"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/horizontalLayout_one"
         app:layout_constraintTop_toBottomOf="@id/horizontalLayout_one" />
+
+    <ImageView
+        android:id="@+id/expectedImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/class1_alpha_letters_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

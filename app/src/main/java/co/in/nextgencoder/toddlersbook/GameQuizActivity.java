@@ -3,6 +3,7 @@ package co.in.nextgencoder.toddlersbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -55,8 +56,14 @@ public class GameQuizActivity extends AppCompatActivity {
     private void optionSelected( int selectedIndex) {
         if(questionSet.getQuestions().get(index).getAnswer() == selectedIndex) {
             myDialog.setContentView( R.layout.correct);
-            index++;
-            setImages();
+            if( questionSet.getQuestions().size() != (index+1)) {
+                index++;
+                setImages();
+            } else {
+                Intent intent = new Intent( this, ClassThreeActivity.class);
+                startActivity( intent);
+            }
+
         } else {
             myDialog.setContentView( R.layout.wrong);
         }
