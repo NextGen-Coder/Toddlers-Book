@@ -14,14 +14,14 @@ public class StoryServiceImpl implements StoryService {
     @Override
     public Story getStoryScenes(StoryTimeActivity storyTimeActivity, int storyId) {
         List<Scene> sceneList = new ArrayList<>();
-        for (int i=0; i < 2; i++) {
+        for (int i=0; i < 20; i++) {
             Scene scene = new Scene();
 
-//            int primaryImgResId = storyTimeActivity.getResources().getIdentifier( "story_"+storyId+"_scene_"+i, "drawable", storyTimeActivity.getPackageName());
-//            int primarySoundResId = storyTimeActivity.getResources().getIdentifier( "story_"+storyId+"_scene_"+i, "raw", storyTimeActivity.getPackageName());
+            int primaryImgResId = storyTimeActivity.getResources().getIdentifier( "story_"+storyId+"_scene_"+i+"c", "drawable", storyTimeActivity.getPackageName());
+            int primarySoundResId = storyTimeActivity.getResources().getIdentifier( "story_"+storyId+"_scene_"+i, "raw", storyTimeActivity.getPackageName());
 
-            int primaryImgResId = storyTimeActivity.getResources().getIdentifier( "class1_alpha_letters_"+i, "drawable", storyTimeActivity.getPackageName());
-            int primarySoundResId = storyTimeActivity.getResources().getIdentifier( "class1_alpha_"+i, "raw", storyTimeActivity.getPackageName());
+//            int primaryImgResId = storyTimeActivity.getResources().getIdentifier( "class1_alpha_letters_"+i, "drawable", storyTimeActivity.getPackageName());
+//            int primarySoundResId = storyTimeActivity.getResources().getIdentifier( "class1_alpha_"+i, "raw", storyTimeActivity.getPackageName());
 
             scene.setImageId( primaryImgResId);
             scene.setSoundId( primarySoundResId);

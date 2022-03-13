@@ -33,7 +33,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card1_capital" />
+                app:srcCompat="@drawable/card_game_quiz" />
 
         </androidx.cardview.widget.CardView>
 
@@ -65,7 +65,7 @@
                 android:layout_weight="1"
                 android:onClick="goToFlipCardActivity"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card1_capital" />
+                app:srcCompat="@drawable/card_flip_card" />
 
         </androidx.cardview.widget.CardView>
 
@@ -99,7 +99,7 @@
                 android:layout_weight="1"
                 android:onClick="goToOrderdActivity"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/card1_capital" />
+                app:srcCompat="@drawable/card_sort_numbers" />
 
         </androidx.cardview.widget.CardView>
 

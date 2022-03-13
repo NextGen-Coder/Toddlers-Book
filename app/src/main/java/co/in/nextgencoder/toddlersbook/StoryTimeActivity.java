@@ -2,6 +2,7 @@ package co.in.nextgencoder.toddlersbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -30,13 +31,21 @@ public class StoryTimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_time);
 
+        setRequestedOrientation( ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
         primaryIV = findViewById( R.id.primaryImage);
 
-        int storyId = getIntent().getIntExtra( "storyId", 0);
+        int storyId = 0;
 
         story = storyService.getStoryScenes( this, storyId);
 
         initializeResources();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
     }
 
     private void initializeResources() {

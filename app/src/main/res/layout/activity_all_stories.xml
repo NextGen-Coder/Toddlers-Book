@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllStoriesActivity">
+    tools:context=".AllStoriesActivity"
+    android:background="@drawable/bg_main">
 
 
     <TextView
@@ -14,65 +15,43 @@
         android:layout_marginTop="8sp"
         android:text="Stories"
         android:textSize="40dp"
+        android:textColor="#006400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/classOneLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        >
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            app:cardCornerRadius="30dp"
+            app:cardUseCompatPadding="false"
             >
 
             <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="231dp"
-
-                android:layout_height="206dp"
-                android:src="@drawable/try_icon"
+                android:id="@+id/viewCapitalLetters"
                 android:onClick="firstStory"
-                android:layout_gravity="center"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/story1" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="227dp"
-                android:layout_height="255dp"
-                android:layout_gravity="center"
-                android:onClick="secondStory"
-                android:src="@drawable/try_icon" />
+        </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="228dp"
-                android:layout_height="251dp"
-                android:layout_gravity="center"
-                android:src="@drawable/try_icon" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="227dp"
-                android:layout_height="255dp"
-                android:layout_gravity="center"
-                android:src="@drawable/try_icon" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="242dp"
-                android:layout_height="243dp"
-                android:layout_gravity="center"
-                android:src="@drawable/try_icon" />
-
-        </LinearLayout>
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
