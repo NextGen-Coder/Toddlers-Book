@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToddlersBook">
         <activity
-            android:name=".OrderedNumbers"
+            android:name=".OrderedNumbersActivity"
             android:exported="false" />
         <activity
             android:name=".FlipCardGame"

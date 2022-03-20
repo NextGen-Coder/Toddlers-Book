@@ -27,7 +27,7 @@ public class ClassThreeActivity extends AppCompatActivity {
 
     public void goToOrderdActivity(View view) {
 
-        Intent intent = new Intent(getApplicationContext(),OrderedNumbers.class);
+        Intent intent = new Intent(getApplicationContext(), OrderedNumbersActivity.class);
         startActivity(intent);
     }
 }
